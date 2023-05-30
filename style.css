@@ -1,6 +1,6 @@
 body {
     min-height: 100vh;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
 }
@@ -8,6 +8,7 @@ body {
 .container {
 min-height: 375px;
 width: 200px;
+padding: 50px;
 }
 
 .container--orange {
@@ -22,10 +23,6 @@ background-color: hsl(184, 100%, 22%);
 .container--green {
 background-color: hsl(179, 100%, 13%);
 border-radius: 0px 15px 15px 0px;
-}
-
-div {
-    padding: 50px;
 }
 
 .button {
@@ -68,3 +65,18 @@ font-size: 15px;
 line-height: 25px;
 }
 
+@media screen and (max-width: 375px){
+
+body {
+    width: 100%;
+    display: block;
+}
+
+.container--orange {
+    border-radius: 15px 15px 0px 0px;
+    }
+    
+.container--green {
+    border-radius: 0px 0px 15px 15px;
+    }
+}
